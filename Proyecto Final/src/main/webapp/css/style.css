@@ -1,0 +1,225 @@
+/* Estilos CSS para el foro */
+/* Puedes personalizarlos según tus necesidades */
+
+@font-face {
+    font-family: 'tommy';
+    src: url('../fonts/tommy.otf') format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+.mensaje-container {
+    text-align: center;
+    margin: 50px auto;
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+.fecha {
+    float: left;
+}
+.usuario {
+    float: right;
+}
+.titulo {
+    font-size: 24px;
+    margin-top: 10px;
+}
+.contenido {
+    margin-top: 20px;
+}
+.centrar-registro {
+    text-align: center;
+    margin-top: 50px;
+}
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 24px;
+    line-height: 50px;
+    cursor: pointer;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'tommy';
+    background-color: #eeeeee;
+}
+
+.show-none {
+    display: none;
+}
+
+textarea {
+    width: 100%;
+    height: 50px;
+    resize: none;
+}
+
+.phone {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%
+
+}
+
+.register-form {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.cabecera {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #cac4b0;
+    height: 70px;
+}
+
+.button {
+    background-color: black;
+    color: white;
+    width: 200px;
+    height: 50px;
+    padding: 10px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.centrar-registro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cabecera a{
+    text-decoration: none; /*quita el subrayado y cualquier estilo de texto cursiva etc*/
+    font-size: 24px;
+    color: #111111;
+}
+
+.nav-box {
+    width: 33%;
+    text-align: center;
+}
+
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.forum-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.forum-post {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.post-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.post-content {
+    margin-bottom: 10px;
+}
+
+.post-contributor {
+    font-style: italic;
+}
+
+.accept-button {
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.register-form {
+    margin: 0 auto;
+    width: 300px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.register-form input[type="text"],
+.register-form input[type="password"],
+.register-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.register-form button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login-form {
+    margin: 0 auto;
+    width: 300px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.login-form button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
