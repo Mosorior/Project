@@ -1,3 +1,6 @@
+package com.example.controller;
+
+import com.example.dao.MensajeDAO;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.WebServlet;
@@ -12,10 +15,12 @@ public class EliminarMensajeServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // Obtener el ID del mensaje a eliminar desde la URL
+        // Obtener el ID del mensaje a eliminar desde la URL
         int mensajeId = Integer.parseInt(request.getParameter("mensajeId"));
 
         // Eliminar el mensaje de la base de datos
-        eliminarMensaje(mensajeId);
+        MensajeDAO mensajeDAO = new MensajeDAO();
+        mensajeDAO.eliminarMensaje(mensajeId);
 
         // Redireccionar a la página principal u otra página deseada
         response.sendRedirect("index.jsp");
@@ -25,7 +30,7 @@ public class EliminarMensajeServlet extends HttpServlet {
         String url = "jdbc:sqlite:/home/mosorior/Documentos/GitHub/Project/DB";
 
         try (Connection conn = DriverManager.getConnection(url);
-             PreparedStatement stmt = conn.prepareStatement("DELETE FROM mensaje WHERE usuario = ?")) {
+             PreparedStatement stmt = conn.prepareStatement("DELETE FROM mensaje WHERE id = ?")) {
 
             stmt.setInt(1, mensajeId);
             stmt.executeUpdate();

@@ -1,3 +1,4 @@
+package com.example.controller;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.WebServlet;
@@ -14,7 +15,7 @@ public class EliminarUsuarioServlet extends HttpServlet {
         // Obtener el nombre de usuario a eliminar desde la URL
         String usuario = request.getParameter("usuario");
 
-        // Eliminar el usuario de la base de datos
+        // Eliminar el usuario y los mensajes asociados de la base de datos
         eliminarUsuario(usuario);
 
         // Redireccionar a la página principal u otra página deseada
@@ -25,10 +26,16 @@ public class EliminarUsuarioServlet extends HttpServlet {
         String url = "jdbc:sqlite:/home/mosorior/Documentos/GitHub/Project/DB";
 
         try (Connection conn = DriverManager.getConnection(url);
-             PreparedStatement stmt = conn.prepareStatement("DELETE FROM usuario WHERE usuario = ?")) {
+             PreparedStatement stmtMensajes = conn.prepareStatement("DELETE FROM mensaje WHERE usuario = ?");
+             PreparedStatement stmtUsuario = conn.prepareStatement("DELETE FROM usuario WHERE usuario = ?")) {
 
-            stmt.setString(1, usuario);
-            stmt.executeUpdate();
+            // Eliminar los mensajes asociados al usuario
+            stmtMensajes.setString(1, usuario);
+            stmtMensajes.executeUpdate();
+
+            // Eliminar el usuario
+            stmtUsuario.setString(1, usuario);
+            stmtUsuario.executeUpdate();
 
         } catch (SQLException e) {
             e.printStackTrace();

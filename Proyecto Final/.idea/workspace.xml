@@ -10,16 +10,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="feec524f-0161-49b8-bb1c-ec97c4d37f7d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/eliminar_mensaje.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../DB" beforeDir="false" afterPath="$PROJECT_DIR$/../DB" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/ayudar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ayudar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pedir_ayuda.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pedir_ayuda.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/procesar_aceptar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/procesar_aceptar.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/EliminarMensajeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/EliminarMensajeServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/EliminarUsuarioServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/EliminarUsuarioServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/eliminarMensajeServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/eliminarUsuarioServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dao/MensajeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dao/MensajeDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin_index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin_index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Jsp File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -47,13 +59,14 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "admin",
     "last_opened_file_path": "/home/mosorior/Documentos/GitHub/Project/DB",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -140,7 +153,8 @@
       <updated>1684881880179</updated>
       <workItem from="1684881881557" duration="127000" />
       <workItem from="1684882016865" duration="1066000" />
-      <workItem from="1684907943657" duration="7477000" />
+      <workItem from="1684907943657" duration="10765000" />
+      <workItem from="1684920381673" duration="6408000" />
     </task>
     <servers />
   </component>
