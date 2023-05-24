@@ -14,6 +14,7 @@
   <title>Foro de Mensajes</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <style>
+    /* Estilos CSS */
 
     .mensaje-container {
       border: 1px solid #ccc;
@@ -60,15 +61,31 @@
     .rechazado {
       border-color: red;
     }
+    .centrado{
+      text-align: center;
+    }
   </style>
   <script>
+    // Verificar si el usuario ha iniciado sesión y mostrar/ocultar elementos de la página
     window.addEventListener('DOMContentLoaded', (event) => {
       const userInfo = document.getElementById('user-info');
       const mensajeContainers = document.getElementsByClassName('mensaje-container');
+      const pedirAyudaLink = document.getElementById('pedir-ayuda-link');
+      const ayudarLink = document.getElementById('ayudar-link');
 
-      // Verificar si el usuario ha iniciado sesión y mostrar/ocultar la foto y el nombre de usuario
       if (isUserLoggedIn()) {
         const username = getUsername(); // Obtener el nombre de usuario del backend
+
+        // Mostrar/ocultar enlaces de la barra de navegación según el rol del usuario
+        const rolUsuario = getCookieValue('rolUsuario');
+
+        if (rolUsuario === 'solicitante') {
+          pedirAyudaLink.style.display = 'block';
+          ayudarLink.style.display = 'none';
+        } else if (rolUsuario === 'contribuyente') {
+          pedirAyudaLink.style.display = 'none';
+          ayudarLink.style.display = 'block';
+        }
 
         // Mostrar el nombre de usuario
         userInfo.innerText = username;
@@ -85,6 +102,10 @@
         Array.from(mensajeContainers).forEach(container => {
           container.style.display = 'none';
         });
+
+        // Ocultar enlaces de la barra de navegación
+        pedirAyudaLink.style.display = 'none';
+        ayudarLink.style.display = 'none';
       }
     });
 
@@ -139,7 +160,7 @@
     </form>
   </div>
 </header>
-<h1>Foro de Mensajes</h1>
+<h1 class="centrado">Foro de Mensajes</h1>
 <%
   DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 %>
@@ -164,23 +185,6 @@
   </div>
 </div>
 <% } %>
-
-
-<script>
-  // Obtener el elemento del enlace de pedir ayuda y ayudar
-  const pedirAyudaLink = document.getElementById('pedir-ayuda-link');
-  const ayudarLink = document.getElementById('ayudar-link');
-
-  // Verificar si el usuario ha iniciado sesión y mostrar/ocultar los enlaces correspondientes
-  if (isUserLoggedIn()) {
-    pedirAyudaLink.style.display = 'block';
-    ayudarLink.style.display = 'block';
-  } else {
-    pedirAyudaLink.style.display = 'none';
-    ayudarLink.style.display = 'none';
-
-  }
-</script>
 
 </body>
 </html>
