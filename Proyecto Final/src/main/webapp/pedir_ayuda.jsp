@@ -21,6 +21,15 @@
 
   // Comprobar si el rol del usuario es "contribuyente"
   boolean esContribuyente = rolUsuario.equals("contribuyente");
+
+  // Obtener el nombre de usuario desde la cookie "nombreUsuario"
+  String nombreUsuario = "";
+  for (Cookie cookie : cookies) {
+    if (cookie.getName().equals("nombreUsuario")) {
+      nombreUsuario = cookie.getValue();
+      break;
+    }
+  }
 %>
 
 <!DOCTYPE html>
@@ -81,12 +90,12 @@
 <body>
 <header class='cabecera'>
   <div class="nav-box"><a href="index.jsp">Inicio</a></div>
-  <div id="registrarse" class="nav-box"><a href="register.jsp">Registrarse</a></div>
-  <div id="entrar" class="nav-box"><a href="login.jsp">Entrar</a></div>
-  <div class="nav-box"><p id="user-info"></p></div>
-  <form id="logout-form" action="logout.jsp" method="post" style="display: none;">
-    <input class="button" type="submit" value="Cerrar sesión">
-  </form>
+  <div class="nav-box"><p id="user-info"><%= nombreUsuario %></p></div>
+  <div class="nav-box">
+    <form id="logout-form" action="logout.jsp" method="post">
+      <button type="submit">Cerrar sesi&oacute;n</button>
+    </form>
+  </div>
 </header>
 <h1 style="text-align: center; margin-bottom: 20px;">Pide Ayuda</h1>
 <%

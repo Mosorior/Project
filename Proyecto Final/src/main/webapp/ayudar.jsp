@@ -54,13 +54,6 @@
       margin-top: 5px;
     }
 
-    .aceptado {
-      border-color: green;
-    }
-
-    .rechazado {
-      border-color: red;
-    }
     .centrado{
       text-align: center;
     }
@@ -149,14 +142,12 @@
 <body>
 <header class='cabecera'>
   <div class="nav-box"><a href="index.jsp">Inicio</a></div>
-  <div class="nav-box" id="registrarse-link"><a href="register.jsp">Registrarse</a></div>
-  <div class="nav-box" id="entrar-link"><a href="login.jsp">Entrar</a></div>
   <div class="nav-box"><a href="pedir_ayuda.jsp" id="pedir-ayuda-link" style="display: none;">Pedir Ayuda</a></div>
   <div class="nav-box"><a href="ayudar.jsp" id="ayudar-link" style="display: none;">Ayudar</a></div>
   <div class="nav-box" id="user-info"></div>
   <div class="nav-box">
     <form action="logout.jsp" method="post">
-      <button type="submit">Cerrar sesión</button>
+      <button type="submit">Cerrar sesi&oacute;n</button>
     </form>
   </div>
 </header>

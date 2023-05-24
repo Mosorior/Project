@@ -13,9 +13,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
   <title>Procesar Aceptar</title>
 </head>
 <body>
+<div style="background-color: #f0f0f0; padding: 10px;">
+  <button onclick="goBack()">Volver</button>
+</div>
+<script>
+  function goBack() {
+    window.history.back();
+  }
+</script>
 <%
   // Obtener parámetros de la solicitud
   String action = request.getParameter("action");
