@@ -11,18 +11,8 @@
   <component name="ChangeListManager">
     <list default="true" id="feec524f-0161-49b8-bb1c-ec97c4d37f7d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../DB" beforeDir="false" afterPath="$PROJECT_DIR$/../DB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dao/MensajeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dao/MensajeDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dao/UsuarioDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dao/UsuarioDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/ayudar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ayudar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/crear.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/crear.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/login_process.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login_process.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pedir_ayuda.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pedir_ayuda.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/procesar_aceptar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/procesar_aceptar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/register.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/register_process.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/register_process.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,6 +139,7 @@
       <workItem from="1684881881557" duration="127000" />
       <workItem from="1684882016865" duration="1066000" />
       <workItem from="1684907943657" duration="7477000" />
+      <workItem from="1684997745649" duration="927000" />
     </task>
     <servers />
   </component>
