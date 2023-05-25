@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 
 
 public class MensajeDAO {
-    private static final String DB_URL = "jdbc:sqlite:/home/mosorior/Documentos/GitHub/Project/DB";
+    private static final String DB_URL = "jdbc:sqlite:C:/Users/susej/OneDrive/Escritorio/Project/DB";
 
     public void aceptarMensaje(int messageId) {
         try (Connection con = DriverManager.getConnection(DB_URL);

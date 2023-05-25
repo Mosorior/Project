@@ -21,7 +21,7 @@
 
     try {
         Class.forName("org.sqlite.JDBC");
-        con = DriverManager.getConnection("jdbc:sqlite:/home/mosorior/Documentos/GitHub/Project/DB");
+        con = DriverManager.getConnection("jdbc:sqlite:C:/Users/susej/OneDrive/Escritorio/Project/DB");
 
         // Crear la consulta SELECT para verificar las credenciales del usuario
         String query = "SELECT * FROM usuario WHERE usuario = ? AND contrasena = ?";

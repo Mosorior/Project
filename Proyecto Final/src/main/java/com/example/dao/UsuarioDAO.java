@@ -4,7 +4,7 @@ import java.sql.*;
 
 public class UsuarioDAO {
     private static Connection getConnection() throws SQLException {
-        return DriverManager.getConnection("jdbc:sqlite:/home/mosorior/Documentos/GitHub/Project/DB");
+        return DriverManager.getConnection("jdbc:sqlite:C:/Users/susej/OneDrive/Escritorio/Project/DB");
     }
 
     public String getRolByToken(String sessionToken) {

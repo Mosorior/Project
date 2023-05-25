@@ -42,7 +42,7 @@
 
     try {
         Class.forName("org.sqlite.JDBC");
-        con = DriverManager.getConnection("jdbc:sqlite:/home/mosorior/Documentos/GitHub/Project/DB");
+        con = DriverManager.getConnection("jdbc:sqlite:C:/Users/susej/OneDrive/Escritorio/Project/DB");
 
         // Inicio de la transacción explícitamente
         con.setAutoCommit(false);
@@ -57,8 +57,14 @@
             if (count > 0) {
                 // El usuario ya existe, muestra un mensaje de error y finaliza la ejecución
                 %>
-<h1>Error en el registro</h1>
-<p>El usuario ya existe en la base de datos. Por favor, elige otro nombre de usuario.</p>
+<header class='cabecera'>
+    <div class="centrar-logo"><img class="logo" src="Imagenes/logo.png"/></div>
+    <div class="nav-box"><a href="index.jsp">Inicio</a></div>
+    <div class="nav-box"><a href="register.jsp">Registrarse</a></div>
+    <div class="nav-box"><a href="login.jsp">Entrar</a></div>
+</header>
+<h1 style="text-align: center">Error en el registro</h1>
+<p style="text-align: center">El usuario ya existe en la base de datos. Por favor, elige otro nombre de usuario.</p>
     <%
                 return;
             }
@@ -113,6 +119,7 @@
 <title>Registro</title>
 <body>
 <header class='cabecera'>
+    <div class="centrar-logo"><img class="logo" src="Imagenes/logo.png"/></div>
     <div class="nav-box"><a href="index.jsp">Inicio</a></div>
     <div class="nav-box"><a href="register.jsp">Registrarse</a></div>
     <div class="nav-box"><a href="login.jsp">Entrar</a></div>
@@ -124,7 +131,7 @@
 
         <p> ¡El registro se ha realizado correctamente! Inicie sesi&oacute;n para continuar:</p>
         <button class="button" style="cursor: pointer">
-            <a href="logout.jsp" style="text-decoration: none; color: white;" >Iniciar Sesi&oacute;n</a>
+            <a href="logout.jsp" style="text-decoration: none; color: white;">Iniciar Sesi&oacute;n</a>
         </button>
     </div>
 </div>
@@ -149,7 +156,12 @@
     }
     e.printStackTrace();
 %>
-
+<header class='cabecera'>
+    <div class="centrar-logo"><img class="logo" src="Imagenes/logo.png"/></div>
+    <div class="nav-box"><a href="index.jsp">Inicio</a></div>
+    <div class="nav-box"><a href="register.jsp">Registrarse</a></div>
+    <div class="nav-box"><a href="login.jsp">Entrar</a></div>
+</header>
 <h1>Error en el registro</h1>
 <p>Ha ocurrido un error durante el registro. Por favor, int&eacute;ntalo nuevamente.</p>
 <%

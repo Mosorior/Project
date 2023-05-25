@@ -38,64 +38,83 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <title>Foro de Mensajes</title>
-  <style>
-    .mensaje-container {
-      text-align: center;
-      margin: 50px auto;
-      max-width: 600px;
-      padding: 20px;
-      border: 1px solid #ccc;
-      background-color: #f9f9f9;
+  <script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+      const userInfo = document.getElementById('user-info');
+      const logoutForm = document.getElementById('logout-form');
+      const pedirAyudaLink = document.getElementById('pedir-ayuda-link');
+
+      // Verificar si el usuario ha iniciado sesión y mostrar/ocultar la foto y el nombre de usuario
+      if (isUserLoggedIn()) {
+        const username = getUsername(); // Obtener el nombre de usuario del backend
+        const rolUsuario = getCookieValue('rolUsuario'); // Obtener el rol del usuario
+
+        // Mostrar el nombre de usuario
+        userInfo.innerText = username;
+
+        // Mostrar el formulario de logout
+        logoutForm.style.display = 'block';
+
+        // Mostrar los enlaces de Pedir Ayuda y Ayudar según el rol del usuario
+        if (rolUsuario === 'solicitante') {
+          pedirAyudaLink.style.display = 'block';
+        } else if (rolUsuario === 'contribuyente') {
+          pedirAyudaLink.style.display = 'none';
+        }
+
+
+      } else {
+        // Ocultar el nombre de usuario
+        userInfo.style.display = 'none';
+
+        // Ocultar el formulario de logout
+        logoutForm.style.display = 'none';
+
+        // Ocultar los enlaces de Pedir Ayuda y Ayudar
+        pedirAyudaLink.style.display = 'none';
+
+      }
+    });
+
+    // Función para verificar si el usuario ha iniciado sesión
+    function isUserLoggedIn() {
+      // Obtener la cookie de sesión del navegador
+      const sessionToken = getCookieValue('sessionToken');
+
+      return sessionToken !== '';
     }
 
-    .fecha-usuario {
-      font-size: 12px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    // Función para obtener el valor de una cookie por su nombre
+    function getCookieValue(cookieName) {
+      const cookies = document.cookie.split(';');
+
+      for (let i = 0; i < cookies.length; i++) {
+        const cookie = cookies[i].trim();
+
+        // Verificar si la cookie comienza con el nombre buscado
+        if (cookie.startsWith(cookieName + '=')) {
+          // Obtener el valor de la cookie
+          return cookie.substring(cookieName.length + 1);
+        }
+      }
+
+      return '';
     }
 
-    .fecha {
-      font-size: 12px;
-      margin-right: 10px;
+    // Función de ejemplo para obtener el nombre de usuario desde el backend
+    function getUsername() {
+      // Obtener el nombre de usuario almacenado en la cookie "nombreUsuario"
+      return getCookieValue('nombreUsuario');
     }
-
-    .usuario {
-      font-size: 12px;
-      margin-left: 10px;
-    }
-
-    .titulo {
-      font-size: 24px;
-      margin-top: 10px;
-      text-align: center;
-    }
-
-    .contenido {
-      margin-top: 20px;
-      text-align: center;
-    }
-
-    .centrar-registro {
-      text-align: center;
-      margin-top: 50px;
-    }
-
-    .button.disabled {
-      pointer-events: none;
-      opacity: 0.5;
-    }
-  </style>
+  </script>
 </head>
 <body>
 <header class='cabecera'>
+  <div class="centrar-logo"><img class="logo" src="Imagenes/logo.png"/></div>
   <div class="nav-box"><a href="index.jsp">Inicio</a></div>
-  <div class="nav-box"><p id="user-info"><%= nombreUsuario %></p></div>
-  <div class="nav-box">
-    <form id="logout-form" action="logout.jsp" method="post">
-      <button type="submit">Cerrar sesi&oacute;n</button>
-    </form>
-  </div>
+  <div class="nav-box" id="pedir-ayuda-link" style="display: none;"><a href="pedir_ayuda.jsp">Pedir Ayuda</a></div>
+  <div class="nav-box" id="user-info" style="font-size: 24px"></div>
+  <div class="nav-box" id="logout-form"><a href="logout.jsp">Cerrar sesi&oacute;n</a></div>
 </header>
 <h1 style="text-align: center; margin-bottom: 20px;">Pide Ayuda</h1>
 <%
@@ -103,11 +122,23 @@
 %>
 <%
   for (Mensaje mensaje : mensajes) {
-    String fecha = mensaje.getFecha(); // Obtener la fecha sin aplicar formato
+    //2023-05-20T19:24:15.123456
+    String[] fechaYHora = mensaje.getFecha().split("T"); // Obtener la fecha y hora por separado
+    //[2023-05-20, 19:24:15.123456]
+    String fecha = fechaYHora[0]; //Obtener fecha
+    String[] separacion = fecha.split("-"); //Dividir año, mes y dia
+    //[2023, 05, 20]
+    String fechaFormateada =
+            separacion[2] + "/" + separacion[1] + "/" + separacion[0]; //Poner dia, mes y año, usando / como separador
+    // 20/05/2023
+    String hora = fechaYHora[1];
+    // 19:24:15.123456
+    String horaFormateada = hora.substring(0, hora.lastIndexOf('.'));
+    //19:24:15
 %>
 <div class="mensaje-container <%= mensaje.getAceptado() == 1 ? "aceptado" : "" %> <%= mensaje.getAceptado() == 1 ? "rechazado" : "" %>">
   <div class="fecha-usuario">
-    <div class="fecha"><%= fecha %></div>
+    <div class="fecha"><%= fechaFormateada %> - <%= horaFormateada   %></div>
     <div class="usuario"><%= mensaje.getUsuario() %></div>
   </div>
   <div class="titulo"><%= mensaje.getTitulo() %></div>

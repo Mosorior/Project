@@ -7,6 +7,59 @@
     font-weight: normal;
     font-style: normal;
 }
+
+.flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-end {
+    justify-content: end;
+}
+
+.align-center {
+    align-items: center;
+}
+
+
+.logo {
+    height: 50px;
+    width: 50px;
+}
+
+.portada-informacion {
+    display: flex;
+    flex-direction: row;
+    padding: 20px 75px;
+}
+
+.portada-foto {
+    height: 50%;
+    width: 50%;
+}
+
+.centrar-logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+}
+
+.informacion-pagina {
+    text-align: justify;
+    padding: 0 75px;
+    font-size: 20px;
+}
+
+
 .mensaje-container {
     text-align: center;
     margin: 50px auto;
@@ -15,23 +68,29 @@
     border: 1px solid #ccc;
     background-color: #f9f9f9;
 }
+
 .fecha {
     float: left;
 }
+
 .usuario {
     float: right;
 }
+
 .titulo {
     font-size: 24px;
     margin-top: 10px;
 }
+
 .contenido {
     margin-top: 20px;
 }
+
 .centrar-registro {
     text-align: center;
     margin-top: 50px;
 }
+
 .floating-button {
     position: fixed;
     bottom: 20px;
@@ -109,7 +168,7 @@ textarea {
     justify-content: center;
 }
 
-.cabecera a{
+.cabecera a {
     text-decoration: none; /*quita el subrayado y cualquier estilo de texto cursiva etc*/
     font-size: 24px;
     color: #111111;
@@ -222,4 +281,117 @@ textarea {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+}
+
+
+.mensaje-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center; /* Centrar el mensaje */
+    width: 80%; /* Limitar el ancho al 80% */
+    margin-left: auto; /* Centrar horizontalmente */
+    margin-right: auto; /* Centrar horizontalmente */
+}
+
+.mensaje-container.rechazado {
+    background-color: #eee; /* Color de fondo gris para mensajes rechazados */
+}
+
+.fecha {
+    font-size: 12px;
+    color: #666;
+    text-align: left;
+    float: left;
+}
+
+.usuario {
+    font-size: 12px;
+    color: #666;
+    text-align: right;
+    float: right;
+}
+
+.titulo {
+    font-size: 16px;
+    font-weight: bold;
+    clear: both;
+}
+
+.contenido {
+    margin-top: 5px;
+}
+
+.centrado {
+    text-align: center;
+}
+
+.mensaje-container {
+    text-align: center;
+    margin: 50px auto;
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+.fecha-usuario {
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fecha {
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+.usuario {
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.titulo {
+    font-size: 24px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.contenido {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.centrar-registro {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.button.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.aceptar {
+    width: 100px;
+    height: 30px;
+    font-size: 14px;
+    padding: 0;
+    margin-left: 10px;
+    cursor: pointer;
+    background-color: #028c02;
+}
+
+.rechazar {
+    width: 100px;
+    height: 30px;
+    font-size: 14px;
+    padding: 0;
+    cursor: pointer;
+    background-color: #bb0202;
+}
+
+.margen-arriba {
+    margin-top: 15px;
 }

@@ -73,6 +73,7 @@
 <body>
 
 <header class='cabecera'>
+    <div class="centrar-logo"> <img class="logo" src="Imagenes/logo.png"/></div>
     <div class="nav-box"><a href="index.jsp">Inicio</a></div>
     <div class="nav-box"><a href="register.jsp">Registrarse</a></div>
     <div class="nav-box"><a href="login.jsp">Entrar</a></div>
