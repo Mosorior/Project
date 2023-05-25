@@ -10,15 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="feec524f-0161-49b8-bb1c-ec97c4d37f7d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/eliminar_mensaje.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../DB" beforeDir="false" afterPath="$PROJECT_DIR$/../DB" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/EliminarMensajeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/EliminarMensajeServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/EliminarUsuarioServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/EliminarUsuarioServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/eliminarMensajeServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/eliminarUsuarioServlet.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dao/MensajeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dao/MensajeDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin_index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin_index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,25 +46,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "admin",
-    "last_opened_file_path": "/home/mosorior/Documentos/GitHub/Project/DB",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;admin&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/mosorior/Documentos/GitHub/Project/DB&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="GlassFish 7.0.31" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="GlassFish 7.0.31" ALTERNATIVE_JRE_ENABLED="false">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/Proyecto-Final-1.0-SNAPSHOT" />
@@ -154,7 +150,9 @@
       <workItem from="1684881881557" duration="127000" />
       <workItem from="1684882016865" duration="1066000" />
       <workItem from="1684907943657" duration="10765000" />
-      <workItem from="1684920381673" duration="6408000" />
+      <workItem from="1684920381673" duration="6945000" />
+      <workItem from="1684927487720" duration="1785000" />
+      <workItem from="1684994445867" duration="408000" />
     </task>
     <servers />
   </component>

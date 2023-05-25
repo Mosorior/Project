@@ -23,6 +23,7 @@
             const logoutForm = document.getElementById('logout-form');
             const pedirAyudaLink = document.getElementById('pedir-ayuda-link');
             const ayudarLink = document.getElementById('ayudar-link');
+            const adminLink = document.getElementById('admin-link');
             const loginMessage = document.getElementById('login-message');
             const pedirAyudaButton = document.getElementById('pedir-ayuda-button');
             const ayudarButton = document.getElementById('ayudar-link-button');
@@ -41,21 +42,34 @@
                 logoutForm.style.display = 'block';
 
                 // Mostrar los enlaces de Pedir Ayuda y Ayudar según el rol del usuario
-                if (rolUsuario === 'solicitante') {
+                if (rolUsuario === 'solicitante' || rolUsuario === 'admin') {
                     pedirAyudaLink.style.display = 'block';
-                    ayudarLink.style.display = 'none';
-                } else if (rolUsuario === 'contribuyente') {
+                } else {
                     pedirAyudaLink.style.display = 'none';
+                }
+
+                if (rolUsuario === 'contribuyente' || rolUsuario === 'admin') {
                     ayudarLink.style.display = 'block';
+                } else {
+                    ayudarLink.style.display = 'none';
+                }
+
+                // Mostrar el enlace para "admin" si el rol es "admin"
+                if (rolUsuario === 'admin') {
+                    adminLink.style.display = 'block';
                 }
 
                 // Mostrar los botones según el rol del usuario
-                if (rolUsuario === 'solicitante') {
+                if (rolUsuario === 'solicitante' || rolUsuario === 'admin') {
                     pedirAyudaButton.style.display = 'block';
-                    ayudarButton.style.display = 'none';
-                } else if (rolUsuario === 'contribuyente') {
+                } else {
                     pedirAyudaButton.style.display = 'none';
+                }
+
+                if (rolUsuario === 'contribuyente' || rolUsuario === 'admin') {
                     ayudarButton.style.display = 'block';
+                } else {
+                    ayudarButton.style.display = 'none';
                 }
 
                 // Ocultar los enlaces de Entrar y Registrarse
@@ -71,9 +85,10 @@
                 // Ocultar el formulario de logout
                 logoutForm.style.display = 'none';
 
-                // Ocultar los enlaces de Pedir Ayuda y Ayudar
+                // Ocultar los enlaces de Pedir Ayuda, Ayudar y "admin"
                 pedirAyudaLink.style.display = 'none';
                 ayudarLink.style.display = 'none';
+                adminLink.style.display = 'none';
 
                 // Ocultar los botones
                 pedirAyudaButton.style.display = 'none';
@@ -127,6 +142,7 @@
     <div class="nav-box" id="entrar-link"><a href="login.jsp">Entrar</a></div>
     <div class="nav-box"><a href="pedir_ayuda.jsp" id="pedir-ayuda-link" style="display: none;">Pedir Ayuda</a></div>
     <div class="nav-box"><a href="ayudar.jsp" id="ayudar-link" style="display: none;">Ayudar</a></div>
+    <div class="nav-box" id="admin-link" style="display: none;"><a href="admin.jsp">Admin</a></div>
     <div class="nav-box" id="user-info"></div>
     <div class="nav-box">
         <form id="logout-form" action="logout.jsp" method="post" style="display: none;">

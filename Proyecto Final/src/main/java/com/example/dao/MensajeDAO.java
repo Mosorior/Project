@@ -89,10 +89,8 @@ public class MensajeDAO {
     }
     public void eliminarMensaje(int messageId) {
         try (Connection conn = DriverManager.getConnection(DB_URL);
-             PreparedStatement stmt = conn.prepareStatement("DELETE FROM mensaje WHERE id = ?")) {
+             Statement stmt = conn.prepareStatement("DELETE FROM mensaje WHERE id = " + messageId)) {
 
-            stmt.setInt(1, messageId);
-            stmt.executeUpdate();
 
         } catch (SQLException e) {
             e.printStackTrace();
